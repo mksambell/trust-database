@@ -1,6 +1,6 @@
 from flask import render_template
-from taskmanager import app, db
-
+from trustdatabase import app, db
+from trustdatabase.models import Region, Cause, Trust
 
 @app.route("/")
 def home():
