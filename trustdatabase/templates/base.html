@@ -19,6 +19,7 @@
 <body>
 
     <header>
+        <!-- navbar -->
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{{ url_for('home') }}">Trust DB</a>
@@ -44,7 +45,52 @@
             </div>
         </nav>
     </header>
-    
+
+
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="container fixed-bottom">
+            <div class="row g-0">
+                <div class="col-sm">
+                    <h4 id="about-link" data-bs-toggle="modal" data-bs-target="#about">about</h4>
+                </div>
+
+                <div class="modal fade" id="about" tabindex="-1" aria-labelledby="aboutModal"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="aboutModal">About TrustDB</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p><strong>TrustDB</strong> was designed and developed by Mark Sambell in part fulfilment of the Full Stack Developer Course at <a
+                                    href="https://codeinstitute.net/full-stack-software-development-diploma/"
+                                    target="_blank">Code
+                                    Institute</a>.</p>
+
+                                    <p>For more information, you can find the project on <a
+                                        href="https://github.com/mksambell/trust-database" target="_blank">Github</a>. Feel
+                                    free to get in touch with comments, suggestions for improvements, bug reports, etc.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <h4 id="copyright">&#169; 2024 Mark Sambell</h4>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
