@@ -1,7 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1>TrustDB</h1>
-<p>Collate your own database of information about grant-making Trusts</p>
+<div>
+    <h1>TrustDB</h1>
+    <p>Collate your own database of information about grant-making Trusts</p>  
+</div>
+<div class="row">
+    <div class="col">
+        <a href="{{ url_for('add_entry')}}" class="btn btn-outline-primary">Add Entry <i class="fa-solid fa-plus"></i></a>
+    </div>
+</div>
+
 
 {% endblock %}
