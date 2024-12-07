@@ -4,13 +4,14 @@
 <div>
     <h1>Add Entry</h1>
     <p>Complete the form to add a new entry to the database</p>
+    <p>Information about registered charities and trusts can be found on the <a href="https://register-of-charities.charitycommission.gov.uk/en/charity-search" target="_blank">Charity Commission</a> website</p>
 </div>
 
 <div class="row">
     <form class="col" method="POST" action="{{ url_for('add_entry') }}">
         <div class="mb-3">
             <label for="trust_reg_num" class="form-label">Registered Charity No.</label>
-            <input name="trust_reg_num" id="trust_reg_num"type="text" class="form-control" required>
+            <input name="trust_reg_num" id="trust_reg_num" type="text" class="form-control" required>
         </div>
         <div class="mb-3">
             <label for="trust_name" class="form-label">Charity Name</label>
@@ -18,13 +19,30 @@
         </div>
         <div class="mb-3">
             <select id="region_id" name="region_id" class="form-select" aria-label="Region select" required>
-                <option selected>Open this select menu</option>
+                <option selected>Select region</option>
                 {% for region in regions %}
                 <option value="{{ region.id }}">{{ region.region_name }}</option>
                 {% endfor %}
               </select>
         </div>
+        <div class="mb-3">
+            <label for="trust_description" class="form-label">Description</label>
+            <input name="trust_description" id="trust_description" type="textarea" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="trust_phone" class="form-label">Phone Number</label>
+            <input name="trust_phone" id="trust_phone" type="tel" pattern="[0-9]{12}" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="trust_email" class="form-label">Email</label>
+            <input name="trust_email" id="trust_email" type="email" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="trustee_names" class="form-label">Trustee Names</label>
+            <input name="trustee_names" id="trustee_names" type="textarea" class="form-control">
+        </div>
         <button type="submit" class="btn btn-primary">Add Entry</button>
+        <button type="reset" class="btn btn-secondary">Reset form</button>
     </form>
 </div>
 

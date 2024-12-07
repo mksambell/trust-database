@@ -18,7 +18,6 @@ class Trust(db.Model):
     trust_phone = db.Column(db.Integer)
     trust_email = db.Column(db.String(70))
     trustee_names = db.Column(db.Text)
-    trust_apply = db.Column(db.Text)
     region_id = db.Column(db.Integer, db.ForeignKey("region.id", ondelete="CASCADE"), nullable=False)
 
     def __repr__(self):
