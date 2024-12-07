@@ -15,6 +15,10 @@ def add_entry():
                     trust_reg_num=request.form.get("trust_reg_num"), 
                     trust_name=request.form.get("trust_name"),
                     region_id=request.form.get("region_id"),
+                    trust_description=request.form.get("trust_description"),
+                    trust_phone=request.form.get("trust_phone"),
+                    trust_email=request.form.get("trust_email"),
+                    trustee_names=request.form.get("trustee_names"),
                     )
         db.session.add(trust)
         db.session.commit()
