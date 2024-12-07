@@ -3,13 +3,35 @@
 
 <div>
     <h1>TrustDB</h1>
-    <p>Collate your own database of information about grant-making Trusts</p>  
+    <p>Collate your own database of information about grant-making Trusts</p>
 </div>
 <div class="row">
     <div class="col">
-        <a href="{{ url_for('add_entry')}}" class="btn btn-outline-primary">Add Entry <i class="fa-solid fa-plus"></i></a>
+        <a href="{{ url_for('add_entry')}}" class="btn btn-outline-primary">Add Entry <i
+                class="fa-solid fa-plus"></i></a>
     </div>
 </div>
 
+<div class="row">
+    <div class="col sm-12 m-10 l-8">
+        {% for trust in trusts %}
+        <div class="accordion" id="trustAcc">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        {{ trust.trust_reg_num, trust.trust_name }}
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#trustAcc">
+                    <div class="accordion-body">
+                        <strong>Data about each trust displays here
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 
 {% endblock %}

@@ -9,12 +9,16 @@
 <div class="row">
     <form class="col" method="POST" action="{{ url_for('add_entry') }}">
         <div class="mb-3">
+            <label for="trust_reg_num" class="form-label">Registered Charity No.</label>
+            <input name="trust_reg_num" id="trust_reg_num"type="text" class="form-control" required>
+        </div>
+        <div class="mb-3">
             <label for="trust_name" class="form-label">Charity Name</label>
             <input name="trust_name" id="trust_name" type="text" minlength="5" maxlength="60" class="form-control" required>
         </div>
         <div class="mb-3">
-            <label for="trust_reg_num" class="form-label">Registered Charity No.</label>
-            <input name="trust_reg_num" id="trust_reg_num"type="text" class="form-control" required>
+            <label for="region_id" class="form-label">Region Id</label>
+            <input name="region_id" id="region_id" type="number" maxlength="2" class="form-control" required>
         </div>
         <button type="submit" class="btn btn-primary">Add Entry</button>
     </form>

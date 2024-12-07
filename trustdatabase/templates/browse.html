@@ -3,7 +3,36 @@
 
 <div>
     <h1>Browse</h1>
-    <p>Select a category below to display a list of related trusts</p>  
+    <p>Select a region to display a list of related trusts</p>  
+</div>
+
+<div class="row">
+    <div class="col">
+        <a href="{{ url_for('add_region')}}" class="btn btn-outline-primary">Add Region <i
+                class="fa-solid fa-plus"></i></a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col sm-12 m-10 l-8">
+        {% for region in regions %}
+        <div class="accordion" id="regionAcc">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#{{ region.id }}" aria-expanded="false" aria-controls="{{ region.id }}">
+                        {{ region.region_name }}
+                    </button>
+                </h2>
+                <div id="{{ region.id }}" class="accordion-collapse collapse" data-bs-parent="#regionAcc">
+                    <div class="accordion-body">
+                        <strong>Separate for loop to display all related regions here
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </div>
 
 
