@@ -9,6 +9,7 @@ def home():
 
 @app.route("/add_entry", methods=["GET", "POST"])
 def add_entry():
+    regions = list(Region.query.order_by(Region.region_name).all())
     if request.method == "POST":
         trust = Trust(
                     trust_reg_num=request.form.get("trust_reg_num"), 
@@ -18,7 +19,7 @@ def add_entry():
         db.session.add(trust)
         db.session.commit()
         return redirect(url_for("home"))
-    return render_template("add_entry.html")
+    return render_template("add_entry.html", regions=regions)
 
 @app.route("/add_region", methods=["GET", "POST"])
 def add_region():

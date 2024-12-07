@@ -19,13 +19,16 @@
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        {{ trust.trust_reg_num, trust.trust_name }}
+                        data-bs-target="#{{ trust.id }}" aria-expanded="false" aria-controls="{{ trust.id }}">
+                        {{ trust.trust_reg_num }} {{ trust.trust_name }}
                     </button>
+
                 </h2>
-                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#trustAcc">
+                <div id="{{ trust.id }}" class="accordion-collapse collapse" data-bs-parent="#trustAcc">
                     <div class="accordion-body">
-                        <strong>Data about each trust displays here
+                        <button type="button" class="btn btn-success">Edit</button>
+                        <button type="button" class="btn btn-danger">Delete</button>
+                        
                     </div>
                 </div>
             </div>

@@ -14,29 +14,28 @@
 </div>
 
 <div class="row">
-    <div class="col sm-12 m-10 l-8">
-        {% for region in regions %}
-        <div class="accordion" id="regionAcc">
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#{{ region.id }}" aria-expanded="false" aria-controls="{{ region.id }}">
-                        {{ region.region_name }}
-                    </button>
-                </h2>
-                <div id="{{ region.id }}" class="accordion-collapse collapse" data-bs-parent="#regionAcc">
-                    <div class="accordion-body">
-                        <strong>Separate for loop to display all related regions here
-                    </div>
-                </div>
+    {% for region in regions %}
+    <div class="col sm-12 m-6 l-3">
+        <div class="card">
+            <div class="card-body">
+              <button type="button" class="btn btn-primary btn-lg">{{ region.region_name }}</button>
+              <br>
+              <button type="button" class="btn btn-warning">Edit</button>
+              <button type="button" class="btn btn-danger">Delete</button>
             </div>
-        </div>
-        {% endfor %}
+          </div>
+        
+       
     </div>
+    {% endfor %}
 </div>
 
 
 
 
 
+
 {% endblock %}
+
+<!-- add event listener to buttons
+when button is pressed, a list of related trusts are displayed below buttons, in the same way they appear in the home page -->

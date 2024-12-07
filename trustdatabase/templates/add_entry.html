@@ -17,8 +17,12 @@
             <input name="trust_name" id="trust_name" type="text" minlength="5" maxlength="60" class="form-control" required>
         </div>
         <div class="mb-3">
-            <label for="region_id" class="form-label">Region Id</label>
-            <input name="region_id" id="region_id" type="number" maxlength="2" class="form-control" required>
+            <select id="region_id" name="region_id" class="form-select" aria-label="Region select" required>
+                <option selected>Open this select menu</option>
+                {% for region in regions %}
+                <option value="{{ region.id }}">{{ region.region_name }}</option>
+                {% endfor %}
+              </select>
         </div>
         <button type="submit" class="btn btn-primary">Add Entry</button>
     </form>
