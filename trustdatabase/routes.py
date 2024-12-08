@@ -38,3 +38,12 @@ def add_region():
 def browse():
     regions = list(Region.query.order_by(Region.region_name).all())
     return render_template("browse.html", regions=regions)
+
+@app.route("/edit_region/<int:region_id>", methods=["GET", "POST"])
+def edit_region(region_id):
+    region = Region.query.get_or_404(region_id)
+    if request.method == "POST":
+        region.region_name = request.form.get("region_name")
+        db.session.commit()
+        return redirect(url_for("browse"))
+    return render_template("edit_region.html", region=region)
