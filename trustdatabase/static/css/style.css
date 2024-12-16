@@ -1,3 +1,42 @@
+body {
+    /* to stop footer overlapping content */
+    padding-bottom: 66px;
+
+    font-family: "Sen", sans-serif
+}
+
+/* --- Navbar --- */
+
+.navbar {
+    background-color: #5B9CFB;
+}
+
+.navbar a {
+    color: white;
+}
+
+/* --- Main container --- */
+
+.main {
+    padding-top: 6px;
+}
+
+.center {
+    text-align: center;
+}
+
 #accordian_name {
     padding-left: 2rem;
 }
+
+/* --- Footer --- */
+
+h4 {
+    font-size: 1rem;
+    padding-top: 0.5rem;
+    text-align: center;
+}
+
+.modal-backdrop {
+    z-index: 99;
+  }
