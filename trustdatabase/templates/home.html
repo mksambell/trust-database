@@ -20,16 +20,34 @@
                 <h2 class="accordion-header">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                         data-bs-target="#{{ trust.id }}" aria-expanded="false" aria-controls="{{ trust.id }}">
-                        {{ trust.trust_reg_num }} {{ trust.trust_name }}
+                        <strong>{{ trust.trust_reg_num }}</strong>   <span id="accordian_name">{{ trust.trust_name }}</span>
                     </button>
 
                 </h2>
                 <div id="{{ trust.id }}" class="accordion-collapse collapse" data-bs-parent="#trustAcc">
                     <div class="accordion-body">
-                        {{ trust.trust_phone }}
-                        <button type="button" class="btn btn-success">Edit</button>
-                        <button type="button" class="btn btn-danger">Delete</button>
-                        
+                        <div class="row">
+                            <div class="col-6">
+                                <p><strong>Trust Description</strong></p>
+                                  <p>{{ trust.trust_description }} </p>
+                                
+                            </div>
+                            <div class="col-4">
+                                <p><strong>Contact Information</strong></p>
+                                <p>Phone: {{ trust.trust_phone }}</p>
+                                <P>Email: {{ trust.trust_email }}</P>
+                                
+                                <p>Trustees: {{ trust.trustee_names }}</p>
+                            </div>
+                            <div class="col-2 align-center">
+                                <button type="button" class="btn btn-success">Edit</button>
+                                <button type="button" class="btn btn-danger">Delete</button>
+                            </div>
+                        </div>
+
+
+
+
                     </div>
                 </div>
             </div>

@@ -5,7 +5,8 @@ from trustdatabase.models import Region, Trust
 @app.route("/")
 def home():
     trusts = list(Trust.query.order_by(Trust.trust_reg_num).all())
-    return render_template("home.html", trusts=trusts)
+    regions = list(Region.query.order_by(Region.region_name).all())
+    return render_template("home.html", trusts=trusts, regions=regions)
 
 @app.route("/add_entry", methods=["GET", "POST"])
 def add_entry():

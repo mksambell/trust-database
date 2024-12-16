@@ -14,7 +14,7 @@
 
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-        
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
 </head>
@@ -42,7 +42,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url_for('browse') }}">Browse</a>
                         </li>
-                        
+
                     </ul>
                 </div>
             </div>
@@ -57,14 +57,13 @@
 
     <!-- footer -->
     <footer>
-        <div class="container fixed-bottom">
+        <div class="container">
             <div class="row g-0">
                 <div class="col-sm">
                     <h4 id="about-link" data-bs-toggle="modal" data-bs-target="#about">about</h4>
                 </div>
 
-                <div class="modal fade" id="about" tabindex="-1" aria-labelledby="aboutModal"
-                    aria-hidden="true">
+                <div class="modal fade" id="about" tabindex="-1" aria-labelledby="aboutModal" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -73,17 +72,20 @@
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <p><strong>TrustDB</strong> was designed and developed by Mark Sambell in part fulfilment of the Full Stack Developer Course at <a
-                                    href="https://codeinstitute.net/full-stack-software-development-diploma/"
-                                    target="_blank">Code
-                                    Institute</a>.</p>
+                                <p><strong>TrustDB</strong> was designed and developed by Mark Sambell in part
+                                    fulfilment of the Full Stack Developer Course at <a
+                                        href="https://codeinstitute.net/full-stack-software-development-diploma/"
+                                        target="_blank">Code
+                                        Institute</a>.</p>
 
-                                    <p>For more information, you can find the project on <a
-                                        href="https://github.com/mksambell/trust-database" target="_blank">Github</a>. Feel
-                                    free to get in touch with comments, suggestions for improvements, bug reports, etc.</p>
+                                <p>For more information, you can find the project on <a
+                                        href="https://github.com/mksambell/trust-database" target="_blank">Github</a>.
+                                    Feel
+                                    free to get in touch with comments, suggestions for improvements, bug reports, etc.
+                                </p>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-bs-dismiss="about">Close</button>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
