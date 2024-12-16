@@ -2,10 +2,10 @@
 {% block content %}
 
 <div>
-    <h1>Add Entry</h1>
-    <p>Complete the form to add a new entry to the database</p>
-    <p><strong>If the trust's region is not selectable, you need to add this first in the Browse page</strong></p>
-    <p>Information about registered charities and trusts is publicly available on the <a href="https://register-of-charities.charitycommission.gov.uk/en/charity-search" target="_blank">Charity Commission</a> website</p>
+    <h1 class="center">Add Entry</h1>
+    <p class="center">Complete the form to add a new entry to the database</p>
+    <p class="center"><strong>If the trust's region is not selectable, you need to add this first in the Browse by Region page</strong></p>
+    <p class="center">Information about registered charities and trusts is publicly available on the <a href="https://register-of-charities.charitycommission.gov.uk/en/charity-search" target="_blank">Charity Commission</a> website</p>
 </div>
 
 <div class="row">
@@ -19,6 +19,7 @@
             <input name="trust_name" id="trust_name" type="text" minlength="5" maxlength="60" class="form-control" required>
         </div>
         <div class="mb-3">
+            <label for="region_id" class="form-label">Region of operation</label>
             <select id="region_id" name="region_id" class="form-select" aria-label="Region select" required>
                 <option selected>Select region</option>
                 {% for region in regions %}
@@ -42,8 +43,11 @@
             <label for="trustee_names" class="form-label">Trustee Names</label>
             <input name="trustee_names" id="trustee_names" type="textarea" class="form-control">
         </div>
-        <button type="submit" class="btn btn-primary">Add Entry</button>
-        <button type="reset" class="btn btn-secondary">Reset form</button>
+        <div class="center">
+            <button type="submit" class="btn btn-primary">Add Entry</button>
+            <button type="reset" class="btn btn-secondary">Reset form</button>
+        </div>
+        
     </form>
 </div>
 

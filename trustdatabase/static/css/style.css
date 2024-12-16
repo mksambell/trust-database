@@ -5,6 +5,11 @@ body {
     font-family: "Sen", sans-serif
 }
 
+h1 {
+    font-size: 2rem;
+    padding-bottom: .5rem;
+}
+
 /* --- Navbar --- */
 
 .navbar {
@@ -23,6 +28,15 @@ body {
 
 .center {
     text-align: center;
+}
+
+/* --- Form --- */
+
+input[type="text"], 
+input[type="textarea"],
+input[type="email"],
+select  {
+    background-color: #ededeb;
 }
 
 #accordian_name {

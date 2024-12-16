@@ -2,16 +2,17 @@
 {% block content %}
 
 <div>
-    <h1>Browse</h1>
-    <p>Select a region to display a list of related trusts</p>  
+    <h1 class="center">Browse</h1>
+    <p class="center">Select a region to display a list of related trusts</p>  
 </div>
 
-<div class="row">
+<div class="row center">
     <div class="col">
         <a href="{{ url_for('add_region')}}" class="btn btn-outline-primary">Add Region <i
                 class="fa-solid fa-plus"></i></a>
     </div>
 </div>
+<br>
 
 <div class="row">
     {% for region in regions %}
