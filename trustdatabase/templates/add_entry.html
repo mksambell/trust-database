@@ -4,6 +4,7 @@
 <div>
     <h1>Add Entry</h1>
     <p>Complete the form to add a new entry to the database</p>
+    <p><strong>If the trust's region is not selectable, you need to add this first in the Browse page</strong></p>
     <p>Information about registered charities and trusts can be found on the <a href="https://register-of-charities.charitycommission.gov.uk/en/charity-search" target="_blank">Charity Commission</a> website</p>
 </div>
 
@@ -31,7 +32,7 @@
         </div>
         <div class="mb-3">
             <label for="trust_phone" class="form-label">Phone Number</label>
-            <input name="trust_phone" id="trust_phone" type="number" pattern="[0-9]{11}" class="form-control">
+            <input name="trust_phone" id="trust_phone" type="text" pattern="[0-9]{11}" class="form-control">
         </div>
         <div class="mb-3">
             <label for="trust_email" class="form-label">Email</label>
