@@ -70,3 +70,10 @@ def edit_entry(trust_id):
         trust.trustee_names = request.form.get("trustee_names")
         db.session.commit()
     return render_template("edit_entry.html", trust=trust, regions=regions)
+
+@app.route("/delete_entry/<int:trust_id>")
+def delete_entry(trust_id):
+    trust = Trust.query.get_or_404(trust_id)
+    db.session.delete(trust)
+    db.session.commit()
+    return redirect(url_for("home"))
