@@ -8,6 +8,7 @@ body {
 h1 {
     font-size: 2rem;
     padding-bottom: .5rem;
+    padding-top: .5rem;
 }
 
 /* --- Navbar --- */
@@ -30,6 +31,13 @@ h1 {
     text-align: center;
 }
 
+/* --- Home --- */
+
+
+.edit, .delete {
+    margin: 2px;
+}
+
 /* --- Form --- */
 
 input[type="text"], 
@@ -45,14 +53,20 @@ select  {
     padding-left: 2rem;
 }
 
+.accordian-body {
+    background-color: #ededeb;
+}
+
 /* --- Browse page --- */
 
 #region-button {
     margin-bottom: .5rem;
+    background-color: white;
 }
 
 .card {
-    background-color: #ededeb; 
+    background-color: #ededeb;
+    margin-bottom: .5rem;
 }
 /* --- Footer --- */
 
