@@ -62,3 +62,8 @@ h4 {
 .modal-backdrop {
     z-index: 99;
   }
+
+#about-modal-link:hover {
+    cursor: pointer;
+}
+
