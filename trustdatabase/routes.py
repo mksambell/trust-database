@@ -5,8 +5,7 @@ from trustdatabase.models import Region, Trust
 @app.route("/")
 def home():
     trusts = list(Trust.query.order_by(Trust.trust_reg_num).all())
-    regions = list(Region.query.order_by(Region.region_name).all())
-    return render_template("home.html", trusts=trusts, regions=regions)
+    return render_template("home.html", trusts=trusts)
 
 @app.route("/add_entry", methods=["GET", "POST"])
 def add_entry():
@@ -78,3 +77,9 @@ def delete_entry(trust_id):
     db.session.delete(trust)
     db.session.commit()
     return redirect(url_for("home"))
+
+@app.route("/region_display/<int:region_id>", methods=["GET"])
+def region_display(region_id):
+    trusts = list(Trust.query.order_by(Trust.trust_reg_num).all())
+    region = Region.query.get_or_404(region_id)
+    return render_template("region_display.html", trusts=trusts, region=region)
