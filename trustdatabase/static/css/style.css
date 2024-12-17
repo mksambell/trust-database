@@ -51,6 +51,9 @@ select  {
     margin-bottom: .5rem;
 }
 
+.card {
+    background-color: #ededeb; 
+}
 /* --- Footer --- */
 
 h4 {
