@@ -5,11 +5,11 @@
     <h1 class="center">Add Entry</h1>
     <p class="center">Complete the form to add a new entry to the database</p>
     <p class="center"><strong>If the trust's region is not selectable, you need to add this first in the Browse by Region page</strong></p>
-    <p class="center">Information about registered charities and trusts is publicly available on the <a href="https://register-of-charities.charitycommission.gov.uk/en/charity-search" target="_blank">Charity Commission</a> website</p>
+    <p class="center">Information about registered charities and trusts is publicly available on the <a class="external-link" href="https://register-of-charities.charitycommission.gov.uk/en/charity-search" target="_blank">Charity Commission</a> website</p>
 </div>
 
 <div class="row">
-    <form class="col" method="POST" action="{{ url_for('add_entry') }}">
+    <form class="col-lg-8" method="POST" action="{{ url_for('add_entry') }}">
         <div class="mb-3">
             <label for="trust_reg_num" class="form-label">Registered Charity No.</label>
             <input name="trust_reg_num" id="trust_reg_num" type="text" class="form-control" required>

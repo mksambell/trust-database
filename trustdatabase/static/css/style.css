@@ -33,7 +33,6 @@ h1 {
 
 /* --- Home --- */
 
-
 .edit, .delete {
     margin: 2px;
 }
@@ -45,6 +44,14 @@ input[type="textarea"],
 input[type="email"],
 select  {
     background-color: #ededeb;
+}
+
+form {
+    margin: 0 auto;
+}
+
+.external-link {
+    text-decoration: none;
 }
 
 /* --- Accordian --- */

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Collate and search through information about Grant-Making Trusts in the UK, using your own editable database">
-    <title>Trust DB</title>
+    <title>TrustDB</title>
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.png') }}">
 
     <!-- Bootstrap CSS -->
@@ -31,7 +31,8 @@
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg bg-body-primary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/navbar_icon.png')}}" alt="">Trust DB</a>
+                <a class="navbar-brand" href="{{ url_for('home') }}"><img
+                        src="{{ url_for('static', filename='images/navbar_icon.png')}}" alt="">TrustDB</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -80,12 +81,20 @@
                             <div class="modal-body">
                                 <p><strong>TrustDB</strong> was designed and developed by Mark Sambell in part
                                     fulfilment of the Full Stack Developer Course at <a
-                                        href="https://codeinstitute.net/full-stack-software-development-diploma/"
+                                        class="external-link" href="https://codeinstitute.net/full-stack-software-development-diploma/"
                                         target="_blank">Code
                                         Institute</a>.</p>
 
+                                <p>
+                                    The app is designed to help anyone seeking funding sources gather information about
+                                    relevant grant-making trusts, using information available from the <a
+                                        class="external-link" href="https://register-of-charities.charitycommission.gov.uk/en/charity-search"
+                                        target="_blank">Charity
+                                    Commission</a>.
+                                </p>
+
                                 <p>For more information, you can find the project on <a
-                                        href="https://github.com/mksambell/trust-database" target="_blank">Github</a>.
+                                        class="external-link" href="https://github.com/mksambell/trust-database" target="_blank">Github</a>.
                                     Feel
                                     free to get in touch with comments, suggestions for improvements, bug reports, etc.
                                 </p>
