@@ -1,15 +1,15 @@
-# **trust-database-app**
+# **TrustDB**
 
-**trust-database-app** is an app designed to help charitable organisations gather and filter information about grant-making trusts, so that they can apply for funding in the right places. 
+**TrustDB** is an app designed to help organisations seeking funding gather information about relevant grant-making Trusts.
 
-Information about the thousands of grant-making trusts based in the UK is publically available on the Charity Commission website; however, this information is not easy to filter, collate or cross-reference.
+Information about the thousands of grant-making trusts based in the UK is publically available on the Charity Commission website; however, this information is not easy to browse through and there is limited capacity to search for related Trusts.
 
-This app allows a user to gather the information available from the Charity Commission into a single space, which can then be searched through, with reference to related criteria.
+This app allows a user to gather information about Trusts publicly available from the Charity Commission into a database. The user is able to browse Trusts that operate in similar regions. Users can then use this information to complete funding bids, and can update information when necessary.
 
 
-[**trust-database-app**](...URL...)
+[**TrustDB**](https://trustdb-983e714115e8.herokuapp.com/)
 
-![Responsive Screenshot](...LINK...)
+![Responsive Screenshot](/trustdatabase/static/readme_images/responsive_screenshot.png)
 
 ## Contents
 
@@ -33,18 +33,24 @@ This app allows a user to gather the information available from the Charity Comm
 
 ## Strategy
 
+The app was designed in collaboration with a fundraising consultancy business, [Apostle Charity Consulting](https://www.apostlecharityconsulting.com/), which provides fundraising advice and services to charities and churches nationwide. They collate information about grant-making Trusts relevant to a charity's requirements and use that information to create funding bids. 
 
+There are around 8,000 grant-making Trusts active in the UK. The process of gathering all the necessary information about a Trust is time-consuming: the Charity Commission publishes all current data on their website, but users need to navigate through several pages to access it all. It is also not easy to find related Trusts operating in a similar area.
+
+The intention of this app is to provide a single place for all the relevant information to be stored and accessed easily. It also allows a user to create a network of Trusts related by region. For example, if a charity is seeking funding for a project in South London, they would be able to browse through all the Trusts that support activities in that location.
 
 [Back to contents](#contents)
 
 ## User stories
 
-As a user, I want to be able to:
+As a user, I want to:
 1. Create an entry in the database.
-2. search for individual entries in the database.
-3. conduct searches based on related criteria.
-4. update entries
-5. delete entries 
+2. View all the current entries in the database.
+3. Edit the information of an entry
+4. Delete an entry
+5. Browse through Trusts that are related by region.
+6. Navigate easily through the site.
+7. Know where I can find more information about a Trust
 
 
 [Back to contents](#contents)
