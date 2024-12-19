@@ -58,9 +58,18 @@ As a user, I want to:
 
 ## Site Structure
 
-The site is structured on one page which changes according to user interactions:
+The site is structured on three main pages which change according to user interaction
 
+Home
+- The landing page contains the title, a brief description, a link to the Add Entry page and displays all the trusts currently in the database in collapsed format. Each Trust listing has an edit and delete button visible when their tab is opened.
 
+Add entry/Edit entry
+- Contains a form for users to enter/amend information about new entries, a submit button and a reset form button
+
+Browse by Region
+- Displays the current list of regions in the database and an Add Region button. Each region has an edit and delete button. 
+- When a region is selected, a list of related Trusts is displayed in the same format as the home page.
+- An Add Region page displays when the button is clicked, with a single input form and submit button.
 
 [Back to contents](#contents)
 
@@ -78,19 +87,23 @@ The following wireframes were created in [Balsamiq](https://balsamiq.com/) and i
 
 **Typography**
 
-
+The 'Sen' font, from Google Fonts, is used throughout. It is a sans serif font, which provides clear text throughout at different scales.
 
 **Icons**
 
+Plus icons from [FontAwesome](https://fontawesome.com/) are used to give some visual direction on the 'Add Entry' and 'Add Region' buttons.
 
 [Back to contents](#contents)
 
 **Colours**
 
+The colour scheme was chosen to give a high contrast and clean effect with splashes of colour for buttons. The blue colour of the navbar is derived from the Apostle Charity Consulting website. The green and red are the colours used in the bootstrap 'success' and 'danger' buttons.
 
+![Colour palette](/trustdatabase/static/readme_images/palette.png)
 
 **Styling**
 
+- The aim is to make the page as intuitive to use as possible, and to keep the main buttons and features clearly visible and organised. Conventional design choices, such as the location of submit buttons and colour choices of the edit and delete buttons, have been made to help the user navigate the site easily.
 
 
 [Back to contents](#contents)
