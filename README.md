@@ -21,7 +21,6 @@ This app allows a user to gather information about Trusts publicly available fro
     - [Surface](#surface)
 2. [**Features**](#2-features)
 - [Existing Features](#existing-features)
-    - [Title and instructions](#title-and-instructions)
 - [Future Features](#future-features)
 3. [**Technology used**](#3-technology-used)
 4. [**Testing**](#4-testing)
@@ -115,30 +114,86 @@ The site is intended to be easy to navigate around and intuitive to use. Common 
 
 ## Existing Features
 
+### Title logo and navbar
 
+- The title logo is placed at the top left corner of the viewport.
+  - This is a link to the landing page.
+- The navbar is fixed to the top so that users can always navigate the site's pages.
+    - In tablet and mobile formats, the navbar toggles to a burger icon.
+
+![Title logo and navbar](/trustdatabase/static/readme_images/title_navbar.png)
 
 [Back to contents](#contents)
 
+### Landing page
 
+- The main page contains the title and a brief instruction of how to interact with the page.
+- A button to Add Entry sits below this, prominently centered and styled.
+- A full list of trusts is displayed in an accordian feature.
+    - In the collapsed format, only the registered charity number and name of the trust is displayed.
+    - When opened, all the other information is displayed, as well as the edit and delete buttons
 
+![Landing page](/trustdatabase/static/readme_images/landing_page.png)
 
+![Accordian feature](/trustdatabase/static/readme_images/collapsible.png)
 
+[Back to contents](#contents)
 
+### Add Entry/Edit Entry
 
+- The Add Entry page displays a form with all the fields for available data
+     - Only the registered number, name and region are required.
+- A submit and reset button are located at the bottom of the form.
+- Instructions are placed under the title, along with a link to the Charity Commission's website.
+- When a user clicks on the edit button of an entry, the same form is displayed with the existing information.
 
+![Add Entry](/trustdatabase/static/readme_images/add_entry.png)
 
+![Edit Entry](/trustdatabase/static/readme_images/edit_entry.png)
 
+[Back to contents](#contents)
 
+### Browse by Region
 
+- This page displays the existing regions as cards with a button for the name of the region and an edit and delete button.
+    - The cards display stacked 4 across on large screens, 2/3 across on tablets and are stacked one on the other in mobile formats.
+- There is an Add Region button styled in the same way as the Add Entry button.
 
+![Browse](/trustdatabase/static/readme_images/browse.png)
 
+[Back to contents](#contents)
 
+### Region display
 
+- When a user clicks on the name of a region, a list of related trusts is displayed in accordian style
+- A Return to Browse button takes the user back to the Browse page.
+
+![Region](/trustdatabase/static/readme_images/region.png)
+
+### Add/Edit Region
+
+- Accessed from the Browse page by clicking the Add Region button (Edit Region accessed from region card)
+
+![Add Region](/trustdatabase/static/readme_images/add_region.png)
 
 [Back to contents](#contents)
 
 ## Future features
 
+### Database relationships
+
+- Trusts often support more than one cause. By adding another table to the database containing data about the types of causes that Trusts fund, and referencing these causes in the main trust table, users could browse by 'funding cause' as well as Region.
+- A many-to-many relationship would need to be set up - it should be possible to assign several causes to each Trust, and each cause will have many Trusts that link to it.
+
+### API link to Charity Commission
+
+- The Charity Commission have an API which allows calls to be made for all the data they publish.
+- Adding in an API call to populate data in the database would make the process even more efficient.
+
+### Exporting data as CSV
+
+- It would be helpful to be able to extract the data from the database to be able to populate fundraising bid documents.
+- Being able to export a selection of data, or the result of a search would be a useful addition to the app.
 
 
 [Back to contents](#contents)
