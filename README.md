@@ -201,10 +201,13 @@ The site is intended to be easy to navigate around and intuitive to use. Common 
 ## 3. Technology used
 
 - The wireframes were created using [Balsamiq](https://balsamiq.com/)
-- The structure of the site was written in [HTML5](https://html.spec.whatwg.org/)
+- The structure of the site was written with the [Flask](https://flask.palletsprojects.com/en/stable/) framework and [HTML5](https://html.spec.whatwg.org/)
 - The site was styled using [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
+- [Python](https://www.python.org/) was used for the logic and functionality
+- [PostgresSQL](https://www.sqlalchemy.org/) hosts the database and [SQLAlchemy](https://www.sqlalchemy.org/) was used as the ORM
 - The site was developed in [Gitpod](https://www.gitpod.io/) using a Github template from [Code Institute](https://github.com/Code-Institute-Org/ci-full-template)
-- [Github](https://github.com/) was used for version control and for hosting
+- [Github](https://github.com/) was used for version control
+- The site is hosted on [Heroku](https://www.heroku.com/)
 - [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools) were used throughout development and for testing
 - Responsive screenshots created with [Am I Responsive](https://ui.dev/amiresponsive)
 
@@ -217,7 +220,46 @@ For full testing details, including code validation, bugs, user story tests and 
 
 ## 5. Deployment
 
+### To deploy the project on Heroku
 
+  1. Log into Heroku and navigate to the Deploy tab of the app
+  2. In the deployment method, select 'Connect to Github'
+  3. Search for the relevant repo and connect.
+
+  ![Heroku deployment](/trustdatabase/static/readme_images/deploy1.png)
+
+  4. In the Manual Deploy section, select deploy branch.
+  5. Once deployment is confirmed, click 'More' in the top right corner and select 'Run Console'.
+  6. Type 'python3' into the console and click 'Run'.
+  7. Enter the commands to create the tables in the database:
+        ```
+        from trustdatabase import db
+        db.create_all()
+        ```
+  8. Exit the terminal by typing 'quit()'.
+  9. Click on 'Open App' to see the deployed app.
+
+  The live link to the Github repository can be found [here](https://github.com/mksambell/trust-database)
+
+### To fork the repository on Github
+
+A copy of the GitHub Repository can be made by forking the GitHub account. This copy can be viewed and changes can be made to the copy without affecting the original repository. Take the following steps to fork the repository:
+
+1. Log in to GitHub and locate the repository.
+2. On the right hand side of the page inline with the repository name is a button called 'Fork'. Click on the button to create a copy of the original repository in your GitHub Account.
+
+![Github fork](/trustdatabase/static/readme_images/fork.png)
+
+### To clone the project
+
+1. Under the repository’s name, click on the code tab.
+2. In the 'Clone with HTTPS' section, click on the clipboard icon to copy the given URL.
+3. In your IDE, open Git Bash.
+4. Change the current working directory to the location where you want the cloned directory to be made.
+5. Type 'git clone', and then paste the URL copied from GitHub.
+6. Press enter and the local clone will be created.
+
+![Github clone](/trustdatabase/static/readme_images/clone.png)
 
 [Back to contents](#contents)
 
@@ -225,15 +267,18 @@ For full testing details, including code validation, bugs, user story tests and 
 
 ### Code
 
+- Code blocks for accordian, card and modal features adapated from [Bootstrap](https://getbootstrap.com/) demos.
 
-### Content and media
+### Content and Media
 
+- Plus icons from [FontAwesome](https://fontawesome.com/)
+- Font from [GoogleFonts](https://fonts.google.com/)
 
 [Back to contents](#contents)
 
 ## 7. Acknowledgements
 
-This app was developed for my third Milestone Project for the Full Stack Software Developer Diploma at Code Institute. I would like to thank my mentor, [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/), and all at Code Institute for their help and support. I would also like to thank my family for road testing the game and UX.
+This app was developed for my third Milestone Project for the Full Stack Software Developer Diploma at Code Institute. I would like to thank my mentor, [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/), and all at Code Institute for their help and support.
 
 Mark Sambell 2024
 
