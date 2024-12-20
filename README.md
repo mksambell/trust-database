@@ -277,6 +277,7 @@ A copy of the GitHub Repository can be made by forking the GitHub account. This 
 ### Code
 
 - Code blocks for accordian, card and modal features adapated from [Bootstrap](https://getbootstrap.com/) demos.
+- Code for data model and routes adapted and developed from Code Institute tutorial by Tim Nelson.
 
 ### Content and Media
 
