@@ -17,9 +17,9 @@
 
 **TrustDB** has been thoroughly tested. 
 
-The HTML code has been validated by the W3C [W3C HTML Validator](https://validator.w3.org/). Some minor errors were identified and have been fixed and retested (see [Bugs: Resolved](#resolved)). All pages now display the following message:
+The HTML code has been validated by the W3C [W3C HTML Validator](https://validator.w3.org/). Some minor errors were identified and have been fixed and retested (see [Bugs: Resolved](#resolved)). The site now gives the following message:
 
-![html ok](/assets/testing-images/html-ok.png)
+![html ok](/trustdatabase/static/readme_images/html_valid.png)
 
 The CSS has been validated with [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and no errors or warnings were found. The validator displays the following message:
 
@@ -61,56 +61,32 @@ The site functioned as expected on all browsers, in a range of device sizes; fun
 
 ## Testing user stories
 
-1. To find out how to play the game
-    - The 'how to play' link is always located at the top of the viewport (on the right on larger screens, and centrally underneath the title on mobile devices).
-    - The link opens a modal with clear and concise gameplay instructions
+1. Create an entry in the database.
+    - The Add Entry button is prominent on the home page as a button and navbar link
+    - The form on the Add Entry page gives opportunity for user to input various data fields.
 
-2. To navigate easily around the game
-    - All content is contained on one page
-    - Buttons that move the user through the game - new, start, end game and game summary - are styled prominently and located in the same place throughout
-    - Interactions that interrupt the game require confirmation by the user
-    - External links open in new tabs
+2. View all the current entries in the database.
+    - The homepage displays all the current entries in the database, listed in order by the registered charity number.
 
-3. To have clear feedback on my guesses
-    - The feedback section always gives a response to a user guess:
-        - If correct, the user is given a short definition of the word
-        - If incorrect, the user is encouraged to try again (they are prevented from entering the same incorrect answer twice)
-        - If invalid, no lives are lost, and the user is invited to try again
+3. Edit the information of an entry
+    - Opening the collapsible features of each displayed trust on the home page or in the browse section shows the Edit button.
+    - Users can amend info and confirm changes on the Edit Entry page.
 
-4. To clearly see how many lives I have remaining
-    - Lives are clearly displayed in the user input section
-    - Remaining lives are shown with a solid heart icon; lost lives are shown with a heart outline
+4. Delete an entry
+    - Users can delete a trust entry on the home page or through the browse section.
+    - Users can delete a region entry on the browse page
+    - Confirmation is requested to avoid any accidental deletions.
 
-5. To be able to shuffle the letters of the anagram
-    - The shuffle button is located in the user input section.
-    - It can be used as many times as the user likes.
-    - The shuffle button will not accidentally display the actual word
+5. Browse through Trusts that are related by region.
+    - The Browse page allows users to select a region to see all the Trusts that support activities in that area.
 
-6. To be able to end the game at any stage
-    - Once the game has been started, the end game button is displayed below the gameplay panels
-    - Users are asked for confirmation if they click on the button, to prevent accidentally leaving the game early.
-    - The title-logo at the top also provides a link back to the landing page. Again, this requires confirmation to proceed.
+6. Navigate easily through the site.
+    - The navbar and footer remain fixed throughout all pages
+    - Features such as Return to Browse button when a region's Trusts are displayed mean that the user never has to use the 'Back page' button on the browser.
 
-7. To have helpful feedback if I make an input error
-    - The feedback section displays appropriate feedback if a user enters an invalid guess:
-        - If the guess is too short or too long
-        - If it has already been guessed
-        - If it does not contain the letters of the anagram
-        - If there is no guess present
-    - If the user inputs an invalid guess, no lives are lost
+7. Know where I can find more information about a Trust
+    - A link to the Charity Commission is given on the Add Entry and Edit Entry pages
 
-8. To be protected from accidentally ending the game
-    - Confirmation is required in a popup if the user clicks on the end game button or on the title-logo link
-
-9. To receive a summary of each game
-    - Once the game is over, a game summary is presented with a list of solved and unsolved words
-
-10. To have a running total of the words I have solved
-    - The score of successfully unscrambled words is displayed in the user input section
-
-11. To know more about each unscrambled word
-    - Once a word is unscrambled, a short definition, from the Merriam-Webster dictionary, is displayed in the feedback section
-    - If the dictionary does not contain a short defintion of the word, a link to the dictionary is displayed and a message encouraging the user to look up the word manually.
 
 [Back to top](#contents)
 
@@ -119,12 +95,12 @@ The site functioned as expected on all browsers, in a range of device sizes; fun
 ### Resolved
 
 - During validation, a duplicate ID was detected in HTML for the modal pop ups - an oversight in development. The HTML and relevant CSS are now amended.
-- During responsive tests, the URL address bar did not disappear on iOS devices, masking some of the body's content. The issue seems to be related to the way the height of the body content is declared in CSS, and to do with how overflow is dealt with in Bootstrap and iOS. To allow the body to be slightly scrolled and therefore allow the URL bar to disappear, the body's height is set to 101vh for iOS devices. A more elegant and thorough solution may be possible through more refined media queries and specific height declarations.
+- During tests, an issue with the About modal appeared. The modal would pop up but could not be closed - the whole display was greyed out and neither the Close button or dismiss function worked. The issue was that the modal was appearing behind other features. A CSS fix was implemented, giving the modal a higher z-index. It now works as expected.
+- On entering a phone number into the input field of the Add Entry form, the beginning '0' of the phone number was being cut. The Integer range for the phone number entry was not large enough, so this was changed to a text field. It now works as expected.
 
 ### Unresolved
 
-- Some anagrams can be solved with multiple words, for example the anagram SEERT could be RESET, STEER or TREES, etc. At the moment, if the user does not input the correct word, they will simply be told their guess is incorrect. It would be better either to accept the guess if it is a valid word derived from the anagram, or to tell the user that it is a good guess but not the correct word, and not to dock a life. Either way, the program would need to call another API to return all the valid possibilities of the anagram. The user's guess can then be checked against these as part of the checkGuess function and a relevant action taken.
-- During responsive tests, on some mobile Android devices, when the user tapped on the input box, the pop up keyboard distorted the layout of the page. This is because in Android devices, the keyboard pop up alters the viewport height. If the element heights are set with vh measurements, then this will be interpreted when the viewport is changed. Several solutions were suggested on Stack Overflow, including setting the element heights with absolute measurements, using specific media queries, and attempting to override the default behaviour when the keyboard pops up.
+- Users need to ensure that a region exists before selecting it in the Add Entry form. This is a potentially frustrating aspect of the UI, as the form will not submit if the region is not selected - users could input data and lose this input if the form does not submit first time. A solution would be to give the user the opporunity to add a region from the Add Entry page if it does not already exist.
 
 [Back to top](#contents)
 
@@ -134,25 +110,16 @@ The site functioned as expected on all browsers, in a range of device sizes; fun
 
 The site was tested with [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview), one of Google Chrome's developer tools.
 
-The initial test of the home page for mobile device, gave the following result:
+The initial test of the home page gave the following result:
 
-![Lighthouse Test 1](assets/testing-images/lighthouse1.png)
-
-As suggested by Lighthouse, the following improvements were made:
-- Accessibility: Improved contrast between font and background of button group - text is now black instead of lighter black used elsewhere
-- SEO: Added meta description
-
-After these changes were made, the test results showed improvement:
-
-![Lighthouse Test 2](assets/testing-images/lighthouse2.png)
+![Lighthouse Test](/trustdatabase/static/readme_images/lighthouse.png)
 
 #### Future Improvements
 
 As suggested by the Lighthouse tests, further site improvements could include:
-- Minifying JavaScript
-- Serve images in next-gen format
+- Rduce unused CSS
+- Enable text compression
 - Eliminating elements that block the initial render
-- Serve images with low resolution
 
 [Back to top](#contents)
 
