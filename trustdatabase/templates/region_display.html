@@ -12,17 +12,17 @@
     <div class="col sm-12 m-10 l-8">
         {% for trust in trusts %}
         {% if trust.region_id == region.id %}
-        <div class="accordion" id="trustAcc">
+        <div class="accordion" id="trustAcc{{ trust.id }}">
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                         data-bs-target="#{{ trust.id }}" aria-expanded="false" aria-controls="{{ trust.id }}">
                         <strong>{{ trust.trust_reg_num }}</strong> <span
-                            id="accordian_name">{{ trust.trust_name }}</span>
+                            class="accordian_name">{{ trust.trust_name }}</span>
                     </button>
 
                 </h2>
-                <div id="{{ trust.id }}" class="accordion-collapse collapse" data-bs-parent="#trustAcc">
+                <div id="{{ trust.id }}" class="accordion-collapse collapse" data-bs-parent="#trustAcc{{ trust.id }}">
                     <div class="accordion-body">
                         <div class="row">
                             <div class="col-sm-12 col-md-6">

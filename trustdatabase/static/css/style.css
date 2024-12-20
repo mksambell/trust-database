@@ -54,9 +54,14 @@ form {
     text-decoration: none;
 }
 
+.internal-link {
+    text-decoration: none;
+    color: white;
+}
+
 /* --- Accordian --- */
 
-#accordian_name {
+.accordian_name {
     padding-left: 2rem;
 }
 
