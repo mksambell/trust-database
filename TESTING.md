@@ -23,7 +23,7 @@ The HTML code has been validated by the W3C [W3C HTML Validator](https://validat
 
 The CSS has been validated with [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and no errors or warnings were found. The validator displays the following message:
 
-![css ok](/assets/testing-images/css-ok.png)
+![css ok](/trustdatabase/static/readme_images/css_valid.png)
 
 
 [Back to top](#contents)

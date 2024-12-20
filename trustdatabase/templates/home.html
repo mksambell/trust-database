@@ -49,8 +49,8 @@
                                 <p>Trustees: {{ trust.trustee_names }}</p>
                             </div>
                             <div class="col-sm-12 col-md-2 align-center">
-                                <button type="button" class="btn btn-success edit"><a class="internal-link"
-                                        href="{{ url_for('edit_entry', trust_id=trust.id) }}">Edit</a></button>
+                                <a class="btn btn-success edit internal-link"
+                                        href="{{ url_for('edit_entry', trust_id=trust.id) }}">Edit</a>
                                 <button type="button" class="btn btn-danger delete" data-bs-toggle="modal"
                                     data-bs-target="#modal-{{ trust.id }}">
                                     Delete
@@ -72,8 +72,8 @@
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary"
                                                     data-bs-dismiss="modal">Cancel</button>
-                                                <button type="button" class="btn btn-primary"><a class="internal-link" 
-                                                        href="{{ url_for('delete_entry', trust_id=trust.id) }}">Delete</a></button>
+                                                <a class="btn btn-primary internal-link" 
+                                                        href="{{ url_for('delete_entry', trust_id=trust.id) }}">Delete</a>
                                             </div>
                                         </div>
                                     </div>
