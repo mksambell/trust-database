@@ -59,13 +59,13 @@ As a user, I want to:
 
 The site is structured on three main pages which change according to user interaction
 
-Home
+*Home*
 - The landing page contains the title, a brief description, a link to the Add Entry page and displays all the trusts currently in the database in collapsed format. Each Trust listing has an edit and delete button visible when their tab is opened.
 
-Add entry/Edit entry
+*Add entry/Edit entry*
 - Contains a form for users to enter/amend information about new entries, a submit button and a reset form button
 
-Browse by Region
+*Browse by Region*
 - Displays the current list of regions in the database and an Add Region button. Each region has an edit and delete button. 
 - When a region is selected, a list of related Trusts is displayed in the same format as the home page.
 - An Add Region page displays when the button is clicked, with a single input form and submit button.
@@ -76,8 +76,17 @@ Browse by Region
 
 The following wireframes were created in [Balsamiq](https://balsamiq.com/) and include responsive design ideas for Laptop, Tablet and Mobile devices. 
 
+**Home page**
 
+![Home](/trustdatabase/static/readme_images/home_wire.png)
 
+**Add Entry**
+
+![Add Entry](/trustdatabase/static/readme_images/entry_wire.png)
+
+**Browse**
+
+![Browse](/trustdatabase/static/readme_images/browse_wire.png)
 
 [Back to contents](#contents)
 
